@@ -1,6 +1,7 @@
 package pl.lewandowski.book_service;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/book-service")
+@CrossOrigin("*")
 public class BookController {
 
     @Value("${eureka.instance.instance-id}")
@@ -34,7 +36,7 @@ public class BookController {
                         "200",
                         "Przemyslaw Bykowski",
                         "https://bykowski.pl/wp-content/uploads/2023/12/Java-Challenges-Real-Interview-Edition-Small.png",
-                        "")
+                        "https://buy.stripe.com/test_aEUfZ745HgKk7Ly5kk")
         );
 
         return ebookList;

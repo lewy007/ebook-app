@@ -27,3 +27,9 @@ K
 service-registry/.gitignore,3\5\35f2355e849023183ef66a811c3101c8616a2f73
 H
 service-registry/pom.xml,c\8\c838103466e7455490125db06ce61e4ea301ce49
+D
+book-service/pom.xml,e\6\e644ef49641e7b9b6b80b6181b8f9b17771bda26
+Ž
+^service-registry/src/main/java/pl/lewandowski/service_registry/ServiceRegistryApplication.java,4\1\41e35cba9266b50836797383d5578ea928afb2f1
+C
+api-gateway/pom.xml,2\b\2bfa2b108f2439e99e004f4085b58c22cf995f73

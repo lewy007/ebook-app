@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Books</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          height: 100vh;
+          background-color: #f4f4f9;
+        }
+        #books-container {
+          max-width: 500px;
+          padding: 20px;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          background-color: #ffffff;
+        }
+        .book {
+          margin-bottom: 20px;
+          padding: 10px;
+          border-bottom: 1px solid #ddd;
+        }
+        .book img {
+          max-width: 100px;
+          display: block;
+          margin: 10px 0;
+        }
+        .book a {
+          display: inline-block;
+          margin-top: 10px;
+          padding: 8px 12px;
+          background-color: #28a745;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 4px;
+        }
+        .book a:hover {
+          background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+<div id="books-container">
+    <!--    Ksiazki zostana wygenerowane przez Java Script-->
+</div>
+
+<script>
+    const apiUrl = 'http://localhost:8060/book-service/get-ebooks';
+
+   // Funkcja pobierajaca dane z api i wyswietlajaca ksiazki
+    async function fetchBooks() {
+       try {
+         const response = await fetch(apiUrl);
+         if (!response.ok) {
+           throw new Error('Blad pobierania danych');
+         }
+          const booksDate = await response.json();
+          displayBooks(booksDate);
+       } catch (error) {
+         console.error('Wystapil blad: ', error);
+         document.getElementById('books-container').innerText = 'Nie udalo sie pobrac danych.';
+       }
+    }
+
+
+    // Funkcja wyswietlajaca ksiazki
+
+    function displayBooks(books) {
+    const container = document.getElementById('books-container');
+    container.innerHTML = books.map(book => `
+         <div class="book">
+             <p><strong>Tytul:</strong> ${book.info}</p>
+             <p><strong>Autor:</strong> ${book.author}</p>
+             <p><strong>Cena:</strong> ${book.price} PLN</p>
+             <img src="${book.imageUrl}" alt="Okladka ksiazki">
+             <a href="${book.purchaseUrl}" target="_blank">Kup teraz</a>
+         </div>
+      `).join('');
+    }
+
+    // Wywolanie funkcji fetchbooks, aby pobrac i wyswietlic dane
+    fetchBooks();
+
+</script>
+
+</body>
+</html>
