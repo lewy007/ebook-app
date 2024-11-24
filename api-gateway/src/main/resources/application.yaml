@@ -6,6 +6,11 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka/
 
+management:
+  tracing:
+    sample:
+      probability: 1.0
+
 spring:
   application:
     name: api-gateway
@@ -20,3 +25,7 @@ spring:
             uri: lb://payment-validation-service
             predicates:
               - Path=/payment-validation-service/**
+          - id: ebook-delivery-service
+            uri: lb://ebook-delivery-service
+            predicates:
+              - Path=/ebook-delivery-service/**
