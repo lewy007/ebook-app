@@ -33,3 +33,15 @@ D
 book-service/pom.xml,e\6\e644ef49641e7b9b6b80b6181b8f9b17771bda26
 C
 api-gateway/pom.xml,2\b\2bfa2b108f2439e99e004f4085b58c22cf995f73
+«
+{payment-validation-service/src/main/java/pl/lewandowski/payment_validation_service/PaymentValidationServiceApplication.java,d\8\d8bdc0b7579999b5c83552a52c6f5bc769f28e97
+J
+ebook-delivery-service.iml,1\c\1cfc7c1dacc05191ca953ec2d57cbec99db4748f
+N
+ebook-delivery-service/pom.xml,2\7\273e4afeb83af3068ed2cd3d621e304e8fe3b504
+¢
+rebook-delivery-service/src/test/java/pl/lewandowski/ebookdeliveryservice/EbookDeliveryServiceApplicationTests.java,8\d\8df897250b92a39c795a0e30293a1e2a6f8e5f0e
+Q
+!ebook-delivery-service/.gitignore,2\c\2c8d7c647c03b4eeb3421a57b7f4091473f7b1cc
+›
+kpayment-validation-service/src/main/java/pl/lewandowski/payment_validation_service/EbookDeliveryClient.java,e\2\e2054139e1739bf9705cd54bd51e66392bea2674
